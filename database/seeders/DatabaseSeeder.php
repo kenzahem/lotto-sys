@@ -28,5 +28,13 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@mail.com',
             'password' => Hash::make('admin123')
         ]);
+
+        DB::table('roles')->insert([
+            'role_name' => 'Admin'
+        ]);
+
+        DB::table('roles')->insert([
+            'role_name' => 'Agent'
+        ]);
     }
 }

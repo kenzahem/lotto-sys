@@ -14,7 +14,9 @@ Route::middleware('verifyRole', 'auth')->group(function(){
     Route::get('/users/create', Create::class);
 });
 
+Route::middleware('auth')->group(function(){
+    //
+});
 
 //AUTH
 Route::get('/login', Login::class)->name('login');
-
